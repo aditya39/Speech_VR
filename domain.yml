@@ -1,0 +1,63 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - curious_about_current_unit
+  - ask_facility
+  - inform_unit
+  - ask_unit
+  - bot_challenge
+
+entities:
+  - unit_type
+
+slots:
+  unit_type:
+    type: categorical
+    influence_conversation: true
+    values:
+      - studio
+      - satu kamar
+      - dua kamar
+    mappings:
+    - type: from_entity
+      entity: unit_type
+
+responses:
+  utter_asking:
+  - text: "Apakah anda ada pertanyaan?"
+
+  utter_did_that_help:
+  - text: "Apakah jawaban saya membantu anda?"
+
+  utter_happy:
+  - text: "Bagus Lanjutkan!"
+
+  utter_goodbye:
+  - text: "Dadah"
+
+  utter_iamabot:
+  - text: "Saya adalah virtual asisten di dunia ini, yang bertenaga oleh Rasa. Jangan melakukan hal yang aneh ya"
+
+  utter_facility:
+  - text: "Di sini punya fasilitas sebagai berikut: Ada kolam renang, dekat dengan Tol dengan jarak 5 menit dan banyak seperti yang di pamlet"
+
+  utter_unit_to_be_asked:
+  - text: "Halo, Unit apa yang ingin masuki?"
+
+  utter_asked_need_help:
+  - text: "apa ada yang bisa saya bantu?"
+
+  utter_initial_greeting:
+  - text: "Halo Selamat datang, perkenalkan saya asisten anda di dunia ini"
+
+actions:
+  - action_hello_room
+  - action_apartmentKnowledge
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

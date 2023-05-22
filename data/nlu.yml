@@ -1,0 +1,100 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hai
+    - halo
+    - hi
+    - halo disana
+    - selamat pagi
+    - selamat sore
+    - pagi
+    - hai disana
+    - mari pergi
+    - hai teman
+    - selamatpagi
+    - selamatsiang
+    - selamat siang
+
+- intent: goodbye
+  examples: |
+    - dah
+    - selamat tinggal
+    - sampai jumpa lagi
+    - selamat malam
+    - selamattinggal
+    - semoga harimu menyenangkan
+    - sampai jumpa
+    - dadah
+    - sampaijumpalagi
+
+- intent: affirm
+  examples: |
+    - ya
+    - y
+    - benar
+    - tentu saja
+    - itu sepertinya bagus
+    - sepertinya bagus
+    - bagus
+    - benar sekali
+
+- intent: deny
+  examples: |
+    - tidak
+    - tak
+    - ndak
+    - tidak pernah
+    - saya kira tidak demikian
+    - tidak seperti itu
+    - tidak mungkin
+    - tidak terlalu
+
+- intent: mood_great
+  examples: |
+    - sempurna
+    - hebat
+    - luar biasa
+    - serasa seperti raja
+    - saya merasa sangat bagus
+    - saya hebat
+    - saya luar biasa
+    - saya akan menyelamatkan dunia
+    - sangat bersemangat
+    - sangat bagus
+    - sangat sangat sempurna
+    - bagus sekali
+    - sempurna sekali
+
+- intent: curious_about_current_unit
+  examples: |
+    - jelaskan mengenai tentang unit apartemen ini ?
+    - beritahu saya tentang unit apartemen ini ?
+    - apa yang kamu ketahui tentang unit apartemen ini ?
+    - beritahu aku mengenai unit apartemen ini !
+
+- intent: ask_facility
+  examples: |
+    - fasilitas
+    - fasilitas yang disediakan
+    - tentang fasilitas
+    - beritahu aku tentang fasilitasnya
+
+- intent: inform_unit
+  examples: |
+    - [studio](unit_type)
+    - [satu kamar](unit_type)
+    - [dua kamar](unit_type)
+
+- intent: ask_unit
+  examples: |
+    - aku ingin bertanya soal unit apartemen
+    - tentang apartemen
+    - aku ingin tahu soal apartemen
+
+- intent: bot_challenge
+  examples: |
+    - siapa kamu
+    - kamu siapa
+    - apa kamu

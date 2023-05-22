@@ -1,0 +1,95 @@
+version: "3.1"
+
+stories:
+
+- story: hello and good bye 1
+  steps:
+  - intent: greet
+  - action: utter_initial_greeting
+  - action: utter_asked_need_help
+  - intent: deny
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: hello and good bye 2
+  steps:
+  - intent: greet
+  - action: utter_initial_greeting
+  - action: utter_asked_need_help
+  - intent: deny
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: asked about unit studio
+  steps:
+  - intent: greet
+  - action: utter_initial_greeting
+  - action: utter_asked_need_help
+  - intent: ask_unit
+  - action: utter_unit_to_be_asked
+  - intent: inform_unit
+  - slot_was_set:
+    - unit_type: studio
+  - action: action_hello_room
+  - action: utter_asking
+  - intent: curious_about_current_unit
+  - action: action_apartmentKnowledge
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_asking
+  - intent: ask_facility
+  - action: utter_facility
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: asked about unit one bed room
+  steps:
+  - intent: greet
+  - action: utter_initial_greeting
+  - action: utter_asked_need_help
+  - intent: ask_unit
+  - action: utter_unit_to_be_asked
+  - intent: inform_unit
+  - slot_was_set:
+    - unit_type: satu kamar
+  - action: action_hello_room
+  - action: utter_asking
+  - intent: curious_about_current_unit
+  - action: action_apartmentKnowledge
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_asking
+  - intent: ask_facility
+  - action: utter_facility
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: asked about unit two bed room
+  steps:
+  - intent: greet
+  - action: utter_initial_greeting
+  - action: utter_asked_need_help
+  - intent: ask_unit
+  - action: utter_unit_to_be_asked
+  - intent: inform_unit
+  - slot_was_set:
+    - unit_type: dua kamar
+  - action: action_hello_room
+  - action: utter_asking
+  - intent: curious_about_current_unit
+  - action: action_apartmentKnowledge
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_asking
+  - intent: ask_facility
+  - action: utter_facility
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy

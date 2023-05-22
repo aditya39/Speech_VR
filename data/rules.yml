@@ -1,0 +1,34 @@
+version: "3.1"
+
+rules:
+- rule: Greeting and greet back
+  steps:
+  - intent: greet
+  - action: utter_initial_greeting
+  - action: utter_asked_need_help
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Aftermath asking apartemen unit
+  steps:
+  - action: action_apartmentKnowledge
+  - action: utter_did_that_help
+
+- rule: Aftermath asking facility respon good
+  steps:
+  - action: utter_facility
+  - action: utter_did_that_help
+
+- rule: Asking about Facility
+  steps:
+  - intent: ask_facility
+  - action: utter_facility
+  - action: utter_did_that_help
